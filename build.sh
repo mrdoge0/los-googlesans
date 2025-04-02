@@ -47,7 +47,7 @@ if [ $AAPT2_1_EXIT -ne 0 ]; then
   exit $AAPT2_1_EXIT
 fi
 echo "Linking overlay package..."
-aapt2 link -o "../work/system/product/overlay/FontGoogleSansOverlay.apk" --manifest AndroidManifest.xml -R compiled_res.zip --auto-add-overlay --static-lib -I "$HOME/Android/platforms/android-35/android.jar" 
+aapt2 link -o "../work/system/product/overlay/FontGoogleSansOverlay.apk" --manifest AndroidManifest.xml -R compiled_res.zip --auto-add-overlay -I "$HOME/Android/platforms/android-35/android.jar" 
 AAPT2_2_EXIT=$?
 if [ $AAPT2_2_EXIT -ne 0 ]; then
   exit $AAPT2_2_EXIT
